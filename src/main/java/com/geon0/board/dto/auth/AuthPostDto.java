@@ -1,5 +1,9 @@
 package com.geon0.board.dto.auth;
 
+import javax.validation.constraints.Email;
+
+import org.antlr.v4.runtime.misc.NotNull;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,6 +12,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AuthPostDto {
+	
+	@NotNull
+	@Email
 	private String email;
 	private String password;
 }
